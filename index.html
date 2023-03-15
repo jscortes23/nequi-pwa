@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="preload"
+      href="/assets/fonts/Montserrat-VariableFont_wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="main.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="main.css" /></noscript>
+  </head>
+  <body>
+    <main class="container__map">
+      <div class="content__map">
+        <div class="view-start grid-col-6 grid-row-5">
+          <span class="icon icon-gps grid-right-row-3"></span>
+          <div class="container-current-location">
+            <span class="pointer__bubble">
+              <p class="pointer__bubble__title fs-13">Aquí me recoge</p>
+              <p class="pointer__bubble__location fs-17">C.C. Carrera</p>
+              <span class="icon icon-arrow-white"></span>
+            </span>
+            <span class="icon icon-pointer-blue"></span>
+          </div>
+          <button class="btn btn-round btn-menu grid-corner-top-left"></button>
+          <span class="icon icon-small-car"></span>
+          <span class="icon icon-small-car"></span>
+          <button class="btn btn-round btn-gift grid-right-row-4"></button>
+          <span class="icon icon-logo-tl grid-corner-top-right"></span>
+          <span class="icon icon-gift grid-right-row-4"></span>
+          <button
+            class="btn btn-lg-xxx btn-with-icon fs-18 grid-h-full align-sf-end grid-row-5"
+          >
+            ¿Para dónde vas?<span class="icon icon-arrow-dark"></span>
+          </button>
+        </div>
+      </div>
+      <div class="hidden">
+        <span class="icon icon-pointer-dark"></span>
+        <span class="icon icon-arrow-white"></span>
+        <span class="icon icon-small-car"></span>
+        <span class="icon icon-flag"></span>
+      </div>
+    </main>
+  </body>
+</html>
