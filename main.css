@@ -10,10 +10,58 @@
 }
 
 /* Reset browser default style */
-* {
-    margin: 0;
-    padding: 0;
+
+/* Box sizing */
+*,
+*::after,
+*::before {
     box-sizing: border-box;
+}
+
+/* Reset margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+/* Set up the body */
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Make from element easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::after,
+    *::before {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 /* Accessibility */
@@ -56,6 +104,24 @@ html {
 
 .hidden {
     display: none;
+}
+
+.slider {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    list-style: none;
+}
+
+.slider__item {
+    scroll-snap-align: center;
+}
+
+.line-bottom {
+    border-bottom: 1px solid #AFB0B8;
 }
 
 .icon {
@@ -111,8 +177,8 @@ html {
 }
 
 .icon-flag {
-    width: 12px;
-    height: 15px;
+    width: 18px;
+    height: 18px;
     background-image: url('/assets/icons/flag.svg');
 }
 
@@ -120,6 +186,15 @@ html {
     width: 9px;
     height: 14px;
     background-image: url('/assets/icons/arrow-dark.svg');
+}
+
+.icon-arrow-dark-left {
+    width: 23px;
+    height: 23px;
+    border: none;
+    background: none;
+    filter: none;
+    background-image: url('/assets/icons/arrow-left-dark.svg');
 }
 
 .icon-arrow-white {
@@ -134,10 +209,22 @@ html {
     background-image: url('/assets/icons/small-car.svg');
 }
 
+.icon-point-blue {
+    width: 18px;
+    height: 18px;
+    background-image: url('/assets/icons/point-blue.svg');
+}
+
 .icon-pointer-blue {
     width: 30px;
     height: 30px;
     background-image: url('/assets/icons/pointer-blue.svg');
+}
+
+.icon-pointer-green {
+    width: 32px;
+    height: 32px;
+    background-image: url('/assets/icons/pointer-green.svg');
 }
 
 .icon-pointer-dark {
@@ -146,6 +233,23 @@ html {
     background-image: url('/assets/icons/pointer-dark.svg');
 }
 
+.icon-clock {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #919298;
+    background-image: url('/assets/icons/clock.svg');
+    background-size: 19px;
+}
+
+.icon-sequences-points {
+    position: absolute;
+    top: 114px;
+    left: 20px;
+    width: 4px;
+    height: 36px;
+    background-image: url('/assets/icons/sequences-points.svg');
+}
 
 /*********************************************************/
 /************         BUTTONS CLASS         **************/
@@ -168,8 +272,20 @@ html {
 }
 
 /*********************************************************/
+/************         PADDING CLASS         **************/
+/*********************************************************/
+
+.p-28-20 {
+    padding: 28px 20px;
+}
+
+/*********************************************************/
 /************         FONT SIZE CLASS       **************/
 /*********************************************************/
+
+.fs-20 {
+    font-size: var(--lg);
+}
 
 .fs-18 {
     font-size: var(--md);
@@ -179,8 +295,65 @@ html {
     font-size: 1.7rem;
 }
 
+.fs-15 {
+    font-size: var(--sm-x);
+}
+
 .fs-13 {
     font-size: var(--sm-xxx);
+}
+
+/*********************************************************/
+/************         INPUTS CLASS          **************/
+/*********************************************************/
+
+.container__input {
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: min-content 1fr;
+    column-gap: 8px;
+    width: 100%;
+    height: 64px;
+    font-size: 1.9rem;
+}
+
+.container__input__label {
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    transform: translateY(-50%);
+    font-size: inherit;
+    transition: 
+        font-size ease-in 200ms,
+        top ease-in-out 200ms;
+}
+
+.container__input__text {
+    width: 100%;
+    height: 100%;
+    padding: 0 8px;
+    padding-top: 12px;
+    font-weight: 600;
+    background-color: #EDEDED;
+    border: 1.4px solid #CFD3DB;
+    border-radius: 12px;
+}
+
+.container__input__text:valid {
+    background-color: initial;
+    border: 1.4px solid #242B4C;
+    border-radius: 12px;
+}
+
+.container__input__text:focus + .container__input__label {
+    font-size: var(--sm-x);
+    top: 28%;
+}
+
+.container__input__text:valid + .container__input__label {
+    font-size: var(--sm-x);
+    top: 28%;
 }
 
 /*********************************************************/
@@ -290,11 +463,11 @@ html {
 
 .container__map {
     height: 100vh;
+    overflow: hidden;
 }
 
 .content__map {
     position: relative;
-    padding: 28px 20px;
     height: inherit;
     background-image: url('/assets/imgs/map.png');
     background-position: center;
@@ -307,10 +480,50 @@ html {
 /*********************************************************/
 
 .view-start {
+    height: 100%;
+}
+
+.view-start__content {
     display: grid;
     height: 100%;
     justify-items: center;
 }
 
+/*********************************************************/
+/************ SECTION VIEW HERE PICK ME UP  **************/
+/*********************************************************/
 
+.view-here-pick-me-up {
+    width: 100%;
+    height: 100%;
+    background-color: var(--font-color);
+}
 
+.container__enter__locations {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    padding: 28px 12px;
+    padding-bottom: 16px;
+    box-shadow: 0px 3px 7px 0px #00000029;
+    border-radius: 0 0 32px 32px;
+}
+
+.container__enter__locations > :first-child {
+    margin-bottom: 8px;
+}
+
+.container__suggested__locations {
+    height: calc(100vh - 219px);
+}
+
+.suggested__location {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.suggested__location__text {
+    font-size: var(--sm-x);
+}

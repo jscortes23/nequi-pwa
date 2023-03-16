@@ -23,34 +23,194 @@
   <body>
     <main class="container__map">
       <div class="content__map">
-        <div class="view-start grid-col-6 grid-row-5">
-          <span class="icon icon-gps grid-right-row-3"></span>
-          <div class="container-current-location">
-            <span class="pointer__bubble">
-              <p class="pointer__bubble__title fs-13">Aquí me recoge</p>
-              <p class="pointer__bubble__location fs-17">C.C. Carrera</p>
-              <span class="icon icon-arrow-white"></span>
-            </span>
-            <span class="icon icon-pointer-blue"></span>
+        <section class="view-start p-28-20 hidden">
+          <div class="view-start__content grid-col-6 grid-row-5">
+            <span class="icon icon-gps grid-right-row-3"></span>
+            <div class="container-current-location">
+              <span class="pointer__bubble">
+                <p class="pointer__bubble__title fs-13">Aquí me recoge</p>
+                <p class="pointer__bubble__location fs-17">C.C. Carrera</p>
+                <span class="icon icon-arrow-white"></span>
+              </span>
+              <span class="icon icon-pointer-blue"></span>
+            </div>
+            <button
+              class="btn btn-round btn-menu grid-corner-top-left"
+            ></button>
+            <span class="icon icon-small-car"></span>
+            <span class="icon icon-small-car"></span>
+            <button class="btn btn-round btn-gift grid-right-row-4"></button>
+            <span class="icon icon-logo-tl grid-corner-top-right"></span>
+            <span class="icon icon-gift grid-right-row-4"></span>
+            <button
+              class="btn btn-lg-xxx btn-with-icon fs-18 grid-h-full align-sf-end grid-row-5"
+            >
+              ¿Para dónde vas?<span class="icon icon-arrow-dark"></span>
+            </button>
           </div>
-          <button class="btn btn-round btn-menu grid-corner-top-left"></button>
-          <span class="icon icon-small-car"></span>
-          <span class="icon icon-small-car"></span>
-          <button class="btn btn-round btn-gift grid-right-row-4"></button>
-          <span class="icon icon-logo-tl grid-corner-top-right"></span>
-          <span class="icon icon-gift grid-right-row-4"></span>
-          <button
-            class="btn btn-lg-xxx btn-with-icon fs-18 grid-h-full align-sf-end grid-row-5"
-          >
-            ¿Para dónde vas?<span class="icon icon-arrow-dark"></span>
-          </button>
-        </div>
-      </div>
-      <div class="hidden">
-        <span class="icon icon-pointer-dark"></span>
-        <span class="icon icon-arrow-white"></span>
-        <span class="icon icon-small-car"></span>
-        <span class="icon icon-flag"></span>
+        </section>
+        <section class="view-here-pick-me-up">
+          <div class="container__enter__locations">
+            <button class="btn icon icon-arrow-dark-left"></button>
+            <span class="icon icon-sequences-points"></span>
+            <div class="container__input">
+              <span class="icon icon-point-blue"></span>
+              <input
+                type="text"
+                name="here"
+                id="here"
+                class="container__input__text fs-20"
+                required
+              />
+              <label for="here" class="container__input__label"
+                >Aquí me recoge</label
+              >
+            </div>
+            <div class="container__input">
+              <span class="icon icon-flag"></span>
+              <input
+                type="text"
+                name="go"
+                id="go"
+                class="container__input__text fs-20"
+                required
+              />
+              <label for="go" class="container__input__label"
+                >¿para donde vas?</label
+              >
+            </div>
+          </div>
+          <div class="container__suggested__locations">
+            <ul class="slider">
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-pointer-green"></span>
+                  <p class="suggested__location__text">Fijar la ubicación en el mapa</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Av. Américas # 50 - 15</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Postobón  </p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="suggested__location">
+                  <span class="icon icon-clock"></span>
+                  <p class="suggested__location__text">Calle 64 A #50A,28</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
     </main>
   </body>
