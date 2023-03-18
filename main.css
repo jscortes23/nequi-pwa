@@ -171,6 +171,12 @@ html {
     background-image: url('/assets/icons/origin.svg');
 }
 
+.icon-destiny {
+    width: 24px;
+    height: 38px;
+    background-image: url('/assets/icons/search.svg');
+}
+
 .icon-arrow-dark {
     width: 9px;
     height: 14px;
@@ -222,6 +228,12 @@ html {
     background-image: url('/assets/icons/pointer-dark.svg');
 }
 
+.icon-search {
+    width: 24px;
+    height: 38px;
+    background-image: url('/assets/icons/pointer-dark.svg');
+}
+
 .icon-clock {
     width: 32px;
     height: 32px;
@@ -229,6 +241,12 @@ html {
     background-color: #919298;
     background-image: url('/assets/icons/clock.svg');
     background-size: 19px;
+}
+
+.icon-person-talking {
+    width: 34px;
+    height: 32px;
+    background-image: url('/assets/icons/person-talking.svg');
 }
 
 .icon-sequences-points {
@@ -269,6 +287,16 @@ html {
 .btn-green {
     background-color: #CBD73F;
     font-weight: 600;
+}
+
+.btn-ligth-blue {
+    background-color: #889CD3;
+    color: #242B4C;
+}
+
+.btn-dark-blue {
+    background-color: #242B4C;
+    color: #D3DF3F;
 }
 
 .btn-round {
@@ -347,6 +375,11 @@ html {
 .fs-15 {
     font-size: var(--sm-x);
     line-height: 1.829rem;
+}
+
+.fs-14 {
+    font-size: var(--sm-xx);
+    line-height: 1.876rem;
 }
 
 .fs-13 {
@@ -505,6 +538,9 @@ html {
     grid-row: 4;
 }
 
+.row-3 {
+    grid-row: 3;
+}
 .row-4 {
     grid-row: 4;
 }
@@ -553,7 +589,8 @@ html {
 /************ SECTION VIEW HERE PICK ME UP  **************/
 /*********************************************************/
 
-.view-here-pick-me-up {
+.view-here-pick-me-up,
+.view-where-i-go {
     width: 100%;
     height: 100%;
     background-color: var(--font-color);
@@ -592,6 +629,7 @@ html {
 /************ SECTION VIEW MY LOCATION      **************/
 /*********************************************************/
 
-.view-my-location {
+.view-my-location,
+.view-my-destiny {
     height: 100%;
 }
