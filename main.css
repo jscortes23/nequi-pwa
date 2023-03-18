@@ -141,23 +141,6 @@ html {
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
 }
 
-.btn-round {
-    border-radius: 50%;
-    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
-}
-
-.btn-with-icon {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.btn-lg-xxx {
-    padding: 20px;
-    width: 100%;
-    border-radius: 12px;
-}
-
 /*********************************************************/
 /************         ICONS CLASS           **************/
 /*********************************************************/
@@ -180,6 +163,12 @@ html {
     width: 18px;
     height: 18px;
     background-image: url('/assets/icons/flag.svg');
+}
+
+.icon-origin {
+    width: 24px;
+    height: 38px;
+    background-image: url('/assets/icons/origin.svg');
 }
 
 .icon-arrow-dark {
@@ -263,12 +252,64 @@ html {
     background-size: 24px 18px;
 }
 
+.btn-back {
+    width: 48px;
+    height: 48px;
+    background-image: url('/assets/icons/arrow-left-dark.svg');
+}
+
 .btn-gift {
     width: 48px;
     height: 48px;
     background-color: var(--primary-color);
     background-image: url('/assets/icons/gift.svg');
     background-size: 25px;
+}
+
+.btn-green {
+    background-color: #CBD73F;
+    font-weight: 600;
+}
+
+.btn-round {
+    border-radius: 50%;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+}
+
+.btn-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-indicater {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: repeat(2, min-content);
+    justify-items: start;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.btn-indicater > span.icon {
+    grid-column: 1;
+    grid-row: 1/3;
+}
+
+.btn-indicater > p.fs-13 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.btn-indicater > p.fs-20 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.btn-lg-xxx {
+    padding: 18px 20px;
+    width: 100%;
+    border-radius: 12px;
 }
 
 /*********************************************************/
@@ -285,22 +326,32 @@ html {
 
 .fs-20 {
     font-size: var(--lg);
+    line-height: 2.438rem;
+}
+
+.fs-19 {
+    font-size: 1.9rem;
+    line-height: 2.316rem;
 }
 
 .fs-18 {
     font-size: var(--md);
+    line-height: 2.194rem;
 }
 
 .fs-17 {
     font-size: 1.7rem;
+    line-height: 2.072rem;
 }
 
 .fs-15 {
     font-size: var(--sm-x);
+    line-height: 1.829rem;
 }
 
 .fs-13 {
     font-size: var(--sm-xxx);
+    line-height: 1.518rem;
 }
 
 /*********************************************************/
@@ -429,6 +480,11 @@ html {
     grid-template-rows: min-content 1fr repeat(2, min-content) 128px;
 }
 
+.grid-row-4 {
+    grid-template-rows: min-content 1fr repeat(2, min-content);
+    row-gap: 4px;
+}
+
 .grid-corner-top-right {
     grid-column: 6;
     grid-row: 1;
@@ -449,7 +505,11 @@ html {
     grid-row: 4;
 }
 
-.grid-row-5 {
+.row-4 {
+    grid-row: 4;
+}
+
+.row-5 {
     grid-row: 5;
 }
 
@@ -526,4 +586,12 @@ html {
 
 .suggested__location__text {
     font-size: var(--sm-x);
+}
+
+/*********************************************************/
+/************ SECTION VIEW MY LOCATION      **************/
+/*********************************************************/
+
+.view-my-location {
+    height: 100%;
 }
