@@ -19,6 +19,7 @@
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript><link rel="stylesheet" href="main.css" /></noscript>
+    <script defer src="main.js"></script>
   </head>
   <body>
     <main class="container__map">
@@ -436,48 +437,101 @@
             </button>
           </div>
         </section>
-        <section class="view-route view-start__content view-route__content grid-col-6">
-          <div class="view-line-route grid-h-full p-28-20">
-            <span class="icon icon-logo-tl grid-corner-top-right"></span>
-            <button
-              class="btn btn-round btn-back grid-corner-top-left"
-            ></button>
-            <span class="icon icon-small-car"></span>
-            <span class="icon icon-small-car"></span>
-            <div class="container__could-location top-10">
-              <p class="could-location fs-18">Carrera</p>
-              <span class="icon icon-point-blue"></span>
+        <section class="view-route hidden">
+          <div class="view-start__content view-route__content grid-col-6">
+            <div class="view-line-route grid-h-full p-28-20">
+              <span class="icon icon-logo-tl grid-corner-top-right"></span>
+              <button
+                class="btn btn-round btn-back grid-corner-top-left"
+              ></button>
+              <span class="icon icon-small-car"></span>
+              <span class="icon icon-small-car"></span>
+              <div class="container__could-location top-10">
+                <p class="could-location fs-18">Carrera</p>
+                <span class="icon icon-point-blue"></span>
+              </div>
+              <div class="container__could-location top-25">
+                <p class="could-location fs-18">El Campín</p>
+                <span class="icon-point-destiny"></span>
+              </div>
             </div>
-            <div class="container__could-location top-25">
-              <p class="could-location fs-18">El Campín</p>
-              <span class="icon-point-destiny"></span>
+            <div class="container__bottom grid-h-full">
+              <div class="content__bottom">
+                <div class="row__bottom line-bottom">
+                  <span class="icon icon-car"></span>
+                  <p class="fs-18">Normal</p>
+                  <div class="column__bottom">
+                    <p class="fs-16">113.500-17.500</p>
+                    <p class="fs-13">Más Inf.</p>
+                  </div>
+                  <span class="icon icon-arrow-dark"></span>
+                </div>
+                <div class="row__bottom line-bottom">
+                  <p class="fs-15">Código promo</p>
+                  <span class="icon icon-arrow-dark"></span>
+                </div>
+                <div class="row__bottom">
+                  <p class="fs-15">Forma de pago</p>
+                  <p class="fs-16 fw-800 align-icon-text">
+                    <span class="icon icon-nequi"></span>Nequi
+                  </p>
+                </div>
+              </div>
+              <button class="btn btn-green btn-lg-xxx fs-17">
+                ¡Pedir taxi!
+              </button>
             </div>
           </div>
-          <div class="container__bottom grid-h-full">
-            <div class="content__bottom">
-              <div class="row__bottom line-bottom">
-                <span class="icon icon-car"></span>
-                <p class="fs-18">Normal</p>
-                <div class="column__bottom">
-                  <p class="fs-16">113.500-17.500</p>
-                  <p class="fs-13">Más Inf.</p>
-                </div>
-                <span class="icon icon-arrow-dark"></span>
-              </div>
-              <div class="row__bottom line-bottom">
-                <p class="fs-15">Código promo</p>
-                <span class="icon icon-arrow-dark"></span>
-              </div>
-              <div class="row__bottom">
-                <p class="fs-15">Forma de pago</p>
-                <p class="fs-16 fw-800 align-icon-text">
-                  <span class="icon icon-nequi"></span>Nequi
-                </p>
-              </div>
+        </section>
+        <section class="view-with-destiny">
+          <div class="container__could-location top-10">
+            <p class="could-location fs-18">Carrera</p>
+            <span class="icon icon-point-blue"></span>
+          </div>
+          <div class="container__could-location top-25">
+            <p class="could-location fs-18">El Campín</p>
+            <span class="icon-point-destiny"></span>
+          </div>
+          <div class="view-start__content view-route__content grid-col-6">
+            <div class="view-line-route grid-h-full p-28-20">
+              <span class="icon icon-logo-tl grid-corner-top-right"></span>
+              <button
+                class="btn btn-round btn-back grid-corner-top-left"
+              ></button>
+              <span class="icon icon-small-car"></span>
+              <span class="icon icon-small-car"></span>
             </div>
-            <button class="btn btn-green btn-lg-xxx fs-17">
-              ¡Pedir taxi!
-            </button>
+            <div class="container__bottom grid-h-full">
+              <div class="content__bottom__destiy line-top line-bottom">
+                <div class="row__bottom__destiny">
+                  <p class="fw-700 fs-13">Origen:</p>
+                  <p class="fs-13">Av Américas #50-15</p>
+                </div>
+                <div class="row__bottom__destiny">
+                  <p class="fw-700 fs-13">Destino:</p>
+                  <p class="fs-13">Movistar Arena</p>
+                </div>
+                <div class="row__bottom__destiny">
+                  <p class="fw-700 fs-13">Tipo de taxi:</p>
+                  <p class="fs-13">Normal</p>
+                </div>
+                <div class="row__bottom__destiny-with-icon">
+                  <p class="fs-13 fw-700">Forma de pago:</p>
+                  <p class="fs-13">Nequi</p>
+                  <span class="icon icon-nequi"></span>
+                </div>
+                <div class="row__bottom__destiny">
+                  <p class="fw-700 fs-13">Valor:</p>
+                  <p class="fs-13">$13.500-17.500</p>
+                </div>
+              </div>
+              <p class="fs-15 fw-600 mt-4">Buscando un taxi seguro para ti...</p>
+              <img src="/assets/imgs/car.gif" alt="carro andando" class="gif__bottom">
+              <div class="fw-600">00:20</div>
+              <button class="btn btn-lg-xxx btn-alternative fs-14 fw-600">
+                Cancelar solicitud
+              </button>
+            </div>
           </div>
         </section>
       </div>

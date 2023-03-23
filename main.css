@@ -124,6 +124,10 @@ html {
     border-bottom: 1px solid #AFB0B8;
 }
 
+.line-top {
+    border-top: 1px solid #AFB0B8;
+}
+
 .icon {
     display: inline-block;
     background-position: center;
@@ -354,6 +358,12 @@ html {
     grid-row: 2;
 }
 
+.btn-alternative {
+    border: none;
+    filter: none;
+    color: #F55D5D;
+}
+
 .btn-lg-xxx {
     padding: 18px 20px;
     width: 100%;
@@ -366,6 +376,15 @@ html {
 
 .p-28-20 {
     padding: 28px 20px;
+}
+
+
+/*********************************************************/
+/************         MARGIN CLASS          **************/
+/*********************************************************/
+
+.mt-4 {
+    margin-top: 16px;
 }
 
 /*********************************************************/
@@ -414,6 +433,14 @@ html {
 
 .fw-800 {
     font-weight: 800;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-600 {
+    font-weight: 600;
 }
 
 /*********************************************************/
@@ -660,7 +687,8 @@ html {
 
 .view-my-location,
 .view-my-destiny,
-.view-route {
+.view-route,
+.view-with-destiny {
     height: 100%;
 }
 
@@ -709,6 +737,7 @@ html {
 .container__bottom {
     width: 100%;
     display: flex;
+    align-items: center;
     flex-direction: column;
     padding-bottom: 32px;
     background-color: var(--font-color);
@@ -734,7 +763,6 @@ html {
 
 .container__bottom > button.btn {
     width: 90%;
-    margin: 0 auto; 
 }
 
 .row__bottom {
@@ -753,4 +781,53 @@ html {
     display: flex;
     column-gap: 16px;
     align-items: center;
+}
+
+/*********************************************************/
+/************ SECTION VIEW ROUTE            **************/
+/*********************************************************/
+
+.content__bottom__destiy {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+}
+
+.row__bottom__destiny {
+    margin: 14px 0;
+}
+
+.row__bottom__destiny-with-icon {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: repeat(2, min-content);
+}
+
+.row__bottom__destiny-with-icon > .icon {
+    grid-column: 2;
+    grid-row: 1/3;
+}
+
+.row__bottom__destiny-with-icon > p:first-child {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.row__bottom__destiny-with-icon > p:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.content__bottom__destiy > .row__bottom__destiny:nth-child(-2n+3) {
+    border-right: 1px solid #AFB0B8;
+}
+
+.gif__bottom {
+    width: 212px;
+    aspect-ratio: 4/3;
+}
+
+.view-with-destiny .container__bottom {
+    box-shadow: 0px -500px 0px rgba(0,0,0,0.2);
 }
