@@ -79,6 +79,7 @@ html {
     --primary-color: #CADC31;
     --blue-tl: #1B1F3B;
     --text-color: #242B4C;
+    --text-color-purple: #6782CC; 
     --font-color: #FFFFFF;
     --link-color: #3f54a0;
     --sw-card: 2px 5px 10px rgba(0, 0, 0, 0.25);
@@ -142,6 +143,7 @@ html {
     background-color: #FFFFFF;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 12px;
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
 }
 
@@ -202,6 +204,12 @@ html {
     background: none;
     filter: none;
     background-image: url('/assets/icons/arrow-left-dark.svg');
+}
+
+.icon-arrow-dark-right {
+    width: 22px;
+    height: 22px;
+    background-image: url('/assets/icons/arrow-dark-right.svg');
 }
 
 .icon-arrow-white {
@@ -280,6 +288,30 @@ html {
     width: 4px;
     height: 36px;
     background-image: url('/assets/icons/sequences-points.svg');
+}
+
+.icon-x {
+    width: 16px;
+    height: 16px;
+    background-image: url('/assets/icons/equis.svg');
+}
+
+.icon-messenger-call {
+    width: 24px;
+    height: 22px;
+    background-image: url('/assets/icons/messengar-and-call.svg');
+}
+
+.icon-share {
+    width: 24px;
+    height: 22px;
+    background-image: url('/assets/icons/share.svg');
+}
+
+.icon-star-small {
+    width: 17px;
+    height: 17px;
+    background-image: url('/assets/icons/star-green.svg');
 }
 
 /*********************************************************/
@@ -378,6 +410,21 @@ html {
     padding: 28px 20px;
 }
 
+.p-14-18 {
+    padding: 14px 18px;
+}
+
+.py-12 {
+    padding: 12px 0;
+}
+
+.pb-12 {
+    padding-bottom: 12px;
+}
+
+.pt-12 {
+    padding-top: 12px;
+}
 
 /*********************************************************/
 /************         MARGIN CLASS          **************/
@@ -387,8 +434,20 @@ html {
     margin-top: 16px;
 }
 
+.ml-1 {
+    margin-left: 4px;
+}
+
+.ml-2 {
+    margin-left: 8px;
+}
+
+.ml-4 {
+    margin-left: 16px;
+}
+
 /*********************************************************/
-/************         FONT SIZE CLASS       **************/
+/************         FONT CLASS            **************/
 /*********************************************************/
 
 .fs-20 {
@@ -441,6 +500,10 @@ html {
 
 .fw-600 {
     font-weight: 600;
+}
+
+.color-purple {
+    color: var(--text-color-purple);
 }
 
 /*********************************************************/
@@ -573,6 +636,10 @@ html {
     grid-template-rows: min-content 1fr repeat(2, min-content);
     row-gap: 4px;
 }
+.grid-row-3 {
+    grid-template-rows: 1fr repeat(2, min-content);
+    row-gap: 34px;
+}
 
 .grid-corner-top-right {
     grid-column: 6;
@@ -597,12 +664,21 @@ html {
 .row-3 {
     grid-row: 3;
 }
+
 .row-4 {
     grid-row: 4;
 }
 
 .row-5 {
     grid-row: 5;
+}
+
+.col-3-5 {
+    grid-column: 3/5;
+}
+
+.col-5 {
+    grid-column: 5;
 }
 
 .align-sf-end {
@@ -631,7 +707,9 @@ html {
 /************         SECTION VIEW START    **************/
 /*********************************************************/
 
-.view-start {
+.view-start,
+.view-found-taxi,
+.view-found-taxi__content {
     height: 100%;
 }
 
@@ -830,4 +908,50 @@ html {
 
 .view-with-destiny .container__bottom {
     box-shadow: 0px -500px 0px rgba(0,0,0,0.2);
+}
+
+/*********************************************************/
+/************         SECTION VIEW START    **************/
+/*********************************************************/
+
+.view-found-taxi__content {
+    display: grid;
+}
+
+.container__info-driver {
+    padding: 14px;
+    background-color: var(--font-color);
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0px -2px 6px 0px #0000001A;
+}
+
+.info-driver__img {
+    position: absolute;
+    top: -32px;
+    width: 86px;
+    aspect-ratio: 1/1;
+    background-color: rebeccapurple;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.info-driver__space-img {
+    width: 86px;
+    height: 54px;
+    border: none;
+    border-radius: 8px;
+}
+
+.info-driver__row {
+    position: relative;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: min-content repeat(3, 1fr) min-content;
+}
+
+.info-driver__column {
+    display: flex;
+    row-gap: 6px;
+    flex-direction: column;
 }

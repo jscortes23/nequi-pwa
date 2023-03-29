@@ -24,7 +24,7 @@
   <body>
     <main class="container__map">
       <div class="content__map">
-        <section class="view-start p-28-20">
+        <section class="view-start p-28-20 hidden">
           <div class="view-start__content grid-col-6 grid-row-5">
             <span class="icon icon-gps grid-right-row-3"></span>
             <div class="container-current-location">
@@ -525,12 +525,69 @@
                   <p class="fs-13">$13.500-17.500</p>
                 </div>
               </div>
-              <p class="fs-15 fw-600 mt-4">Buscando un taxi seguro para ti...</p>
-              <img src="/assets/imgs/car.gif" alt="carro andando" class="gif__bottom">
+              <p class="fs-15 fw-600 mt-4">
+                Buscando un taxi seguro para ti...
+              </p>
+              <img
+                src="/assets/imgs/car.gif"
+                alt="carro andando"
+                class="gif__bottom"
+              />
               <div class="fw-600">00:20</div>
               <button class="btn btn-lg-xxx btn-alternative fs-14 fw-600">
                 Cancelar solicitud
               </button>
+            </div>
+          </div>
+        </section>
+        <section class="view-found-taxi">
+          <div class="view-found-taxi__content grid-col-6 grid-row-3">
+            <span class="icon icon-logo-tl grid-corner-top-right"></span>
+            <button class="btn btn-lg-xxx grid-h-full btn-with-icon fs-16">
+              Descargar Taxis Libres App
+              <span class="icon icon-arrow-dark-right"></span>
+            </button>
+            <div class="container__info-driver grid-h-full">
+              <div class="info-driver__row pb-12">
+                <img src="" alt="" class="info-driver__img" />
+                <div class="info-driver__space-img"></div>
+                <div class="info-driver__column ml-4">
+                  <p class="fs-13"><span class="icon icon-star-small"></span>4,8</p>
+                  <p class="fs-16">Federico Hernández</p>
+                </div>
+              </div>
+              <div class="info-driver__row line-bottom line-top py-12">
+                <span class="icon icon-car"></span>
+                <div class="info-driver__column ml-1">
+                  <p class="fs-13 color-purple">Tipo de taxi</p>
+                  <p class="fs-16">Normal</p>
+                </div>
+                <div class="info-driver__column ml-1">
+                  <p class="fs-13 color-purple">Placa</p>
+                  <p class="fs-16">SHD211</p>
+                </div>
+                <div class="info-driver__column ml-1">
+                  <p class="fs-13 color-purple">Clave</p>
+                  <p class="fs-16">50</p>
+                </div>
+              </div>
+              <div class="info-driver__row py-12">
+                <span class="icon icon-nequi"></span>
+                <div class="info-driver__column ml-1">
+                  <p class="fs-13 color-purple">Pagas con</p>
+                  <p class="fs-16">Nequi</p>
+                </div>
+                <div class="info-driver__column ml-1 col-3-5">
+                  <p class="fs-13 color-purple">Valor aproximado</p>
+                  <p class="fs-16">$ 13.500 - 16.500</p>
+                </div>
+                <span class="icon icon-arrow-dark col-5"></span>
+              </div>
+              <div class="info-driver__row pt-12">
+                <button class="btn btn-green p-14-18"><span class="icon icon-x"></span></button>
+                <button class="btn btn-green btn-with-icon p-14-18"><span class="icon icon-messenger-call"></span>Contactar</button>
+                <button class="btn btn-green btn-with-icon p-14-18"><span class="icon icon-share"></span>Compartir</button>
+              </div>
             </div>
           </div>
         </section>
