@@ -427,6 +427,14 @@ html {
     padding: 12px 0;
 }
 
+.px-2 {
+    padding-inline: 8px;
+}
+
+.px-3 {
+    padding-inline: 12px;
+}
+
 .pb-12 {
     padding-bottom: 12px;
 }
