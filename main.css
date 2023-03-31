@@ -129,6 +129,10 @@ html {
     border-top: 1px solid #AFB0B8;
 }
 
+.line-right {
+    border-right: 1px solid #AFB0B8;
+}
+
 .icon {
     display: inline-block;
     background-position: center;
@@ -366,6 +370,11 @@ html {
     justify-content: space-between;
 }
 
+.btn-center-content {
+    justify-content: center;
+    column-gap: 9px;
+}
+
 .btn-indicater {
     display: grid;
     grid-template-columns: min-content 1fr;
@@ -444,6 +453,10 @@ html {
 
 .ml-4 {
     margin-left: 16px;
+}
+
+.ml-8 {
+    margin-left: 24px;
 }
 
 /*********************************************************/
@@ -671,6 +684,10 @@ html {
 
 .row-5 {
     grid-row: 5;
+}
+
+.col-2-4 {
+    grid-column: 2/4;
 }
 
 .col-3-5 {
@@ -954,4 +971,9 @@ html {
     display: flex;
     row-gap: 6px;
     flex-direction: column;
+}
+
+.info-driver__row__buttons {
+    grid-template-columns: min-content repeat(2, 1fr);
+    column-gap: 9px;
 }

@@ -24,7 +24,7 @@
   <body>
     <main class="container__map">
       <div class="content__map">
-        <section class="view-start p-28-20">
+        <section class="view-start p-28-20 hidden">
           <div class="view-start__content grid-col-6 grid-row-5">
             <span class="icon icon-gps grid-right-row-3"></span>
             <div class="container-current-location">
@@ -540,7 +540,7 @@
             </div>
           </div>
         </section>
-        <section class="view-found-taxi hidden">
+        <section class="view-found-taxi">
           <div class="view-found-taxi__content grid-col-6 grid-row-3">
             <span class="icon icon-logo-tl grid-corner-top-right"></span>
             <button class="btn btn-lg-xxx grid-h-full btn-with-icon fs-16">
@@ -551,22 +551,22 @@
               <div class="info-driver__row pb-12">
                 <img src="" alt="" class="info-driver__img" />
                 <div class="info-driver__space-img"></div>
-                <div class="info-driver__column ml-4">
+                <div class="info-driver__column ml-4 col-2-4">
                   <p class="fs-13"><span class="icon icon-star-small"></span>4,8</p>
                   <p class="fs-16">Federico Hernández</p>
                 </div>
               </div>
               <div class="info-driver__row line-bottom line-top py-12">
                 <span class="icon icon-car"></span>
-                <div class="info-driver__column ml-1">
+                <div class="info-driver__column ml-1 line-right">
                   <p class="fs-13 color-purple">Tipo de taxi</p>
                   <p class="fs-16">Normal</p>
                 </div>
-                <div class="info-driver__column ml-1">
+                <div class="info-driver__column ml-8 line-right">
                   <p class="fs-13 color-purple">Placa</p>
                   <p class="fs-16">SHD211</p>
                 </div>
-                <div class="info-driver__column ml-1">
+                <div class="info-driver__column ml-8">
                   <p class="fs-13 color-purple">Clave</p>
                   <p class="fs-16">50</p>
                 </div>
@@ -583,10 +583,10 @@
                 </div>
                 <span class="icon icon-arrow-dark col-5"></span>
               </div>
-              <div class="info-driver__row pt-12">
+              <div class="info-driver__row info-driver__row__buttons pt-12">
                 <button class="btn btn-green p-14-18"><span class="icon icon-x"></span></button>
-                <button class="btn btn-green btn-with-icon p-14-18"><span class="icon icon-messenger-call"></span>Contactar</button>
-                <button class="btn btn-green btn-with-icon p-14-18"><span class="icon icon-share"></span>Compartir</button>
+                <button class="btn btn-green btn-with-icon btn-center-content p-14-18"><span class="icon icon-messenger-call"></span>Contactar</button>
+                <button class="btn btn-green btn-with-icon btn-center-content p-14-18"><span class="icon icon-share"></span>Compartir</button>
               </div>
             </div>
           </div>
