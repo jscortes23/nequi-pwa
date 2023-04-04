@@ -9,6 +9,9 @@ const viewWhereIGo = $('.view-where-i-go')
 const viewMyDestiny = $('.view-my-destiny')
 const viewRoute = $('.view-route')
 const viewWithDestiny = $('.view-with-destiny')
+const viewFoundTaxi = $('.view-found-taxi')
+const viewIHaveArrived = $('.view-i-have-arrived')
+const viewCancelTrip = $('.view-cancel-trip')
 
 /* Buttons */
 const btnGo = $('.view-start .btn-lg-xxx')
@@ -17,7 +20,9 @@ const btnHere = $('.view-my-location .btn-lg-xxx.btn-green')
 const btnsSuggestedHere = $$('.view-where-i-go .slider__item')
 const btnGoingThere = $('.view-my-destiny .btn-lg-xxx.btn-dark-blue')
 const btnOrderTaxi= $('.view-route .btn-lg-xxx.btn-green')
-
+const btnCancelTaxi= $('.view-with-destiny .btn-alternative')
+const btnCloseInfo= $('.view-found-taxi .btn.btn-green.p-14-18')
+const btnFoundTaxi= $('.view-i-have-arrived .btn.btn-sm.btn-green')
 
 function nextView(viewCurrent, viewNext) {
     viewCurrent.classList.add('hidden')
@@ -50,4 +55,16 @@ btnGoingThere.addEventListener('click', () => {
 
 btnOrderTaxi.addEventListener('click', () => {
     nextView(viewRoute, viewWithDestiny)
+})
+
+btnCancelTaxi.addEventListener('click', () => {
+    nextView(viewWithDestiny, viewFoundTaxi)
+})
+
+btnCloseInfo.addEventListener('click', () => {
+    nextView(viewFoundTaxi, viewIHaveArrived)
+})
+
+btnFoundTaxi.addEventListener('click', () => {
+    nextView(viewIHaveArrived, viewCancelTrip)
 })
