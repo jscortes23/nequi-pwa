@@ -24,7 +24,7 @@
   <body>
     <main class="container__map">
       <div class="content__map">
-        <section class="view-start p-28-20">
+        <section class="view-start p-28-20 hidden">
           <div class="view-start__content grid-col-6 grid-row-5">
             <span class="icon icon-gps grid-right-row-3"></span>
             <div class="container-current-location">
@@ -604,6 +604,7 @@
                 <button class="btn btn-sm btn-dark-blue fs-18">No</button>
                 <button class="btn btn-sm btn-green fs-18">Si</button>
               </div>
+            </div>
           </div>
         </section>
         <section class="view-cancel-trip hidden">
@@ -618,6 +619,105 @@
               <p class="fs-16 w-100 text-left mb-4">El conductor no puede recogerte.</p>
               <button class="btn btn-sm btn-dark-blue fs-18 w-100 mb-3">Pedir taxi nuevamente</button>
               <button class="btn btn-sm btn-green fs-18 w-100">Pedir después</button>
+          </div>
+        </section>
+        <section class="view-option-cancel-trip p-28-8">
+          <div class="view-option-cancel-trip__content">
+            <button class="btn icon icon-arrow-dark-left ml-7 mb-7"></button>
+            <p class="fs-23 ml-7 fw-600 mb-4">¿Vas a cancelar el viaje?</p>
+            <p class="fs-18 ml-7 fw-600 mb-5">¿Qué pasó?</p>
+            <p class="fs-14 ml-7 mb-4">Selecciona una opción</p>
+            <ol class="slider vh-60 line-top mb-4">
+              <li class="slider__item line-bottom">
+                <div class="container__option-cancel-trip col-gap-5 p-5">
+                  <span class="icon icon-chorometer"></span>
+                  <p class="fs-14">El vehículo se demoró</p>
+                  <input type="radio" name="optionCancelTrip" id="demoro">
+                  <label for="demoro" class="checkbox-square"></label>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="container__option-cancel-trip col-gap-5 p-5">
+                  <span class="icon icon-change"></span>
+                  <p class="fs-14">Tomé otro taxi</p>
+                  <input type="radio" name="optionCancelTrip" id="otroTaxi">
+                  <label for="otroTaxi" class="checkbox-square"></label>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="container__option-cancel-trip col-gap-5 p-5">
+                  <span class="icon icon-warning"></span>
+                  <p class="fs-14">La placa no corresponde</p>
+                  <input type="radio" name="optionCancelTrip" id="placaDiferente">
+                  <label for="placaDiferente" class="checkbox-square"></label>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="container__option-cancel-trip col-gap-5 p-5">
+                  <span class="icon icon-prohibited"></span>
+                  <p class="fs-14">Ya no necesito el taxi</p>
+                  <input type="radio" name="optionCancelTrip" id="noNecesito">
+                  <label for="noNecesito" class="checkbox-square"></label>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="container__option-cancel-trip col-gap-5 p-5">
+                  <span class="icon icon-star-white"></span>
+                  <p class="fs-14">El taxi no es premium</p>
+                  <input type="radio" name="optionCancelTrip" id="noPremium">
+                  <label for="noPremium" class="checkbox-square"></label>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="container__option-cancel-trip col-gap-5 p-5">
+                  <span class="icon icon-deny"></span>
+                  <p class="fs-14">Comunicación inapropiada del conductor</p>
+                  <input type="radio" name="optionCancelTrip" id="comunicacionInapropiada">
+                  <label for="comunicacionInapropiada" class="checkbox-square"></label>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="container__option-cancel-trip col-gap-5 p-5">
+                  <span class="icon icon-person-deny"></span>
+                  <p class="fs-14">El conductor no coincidía con el de la foto</p>
+                  <input type="radio" name="optionCancelTrip" id="conductorDiferente">
+                  <label for="conductorDiferente" class="checkbox-square"></label>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="container__option-cancel-trip col-gap-5 p-5">
+                  <span class="icon icon-question"></span>
+                  <p class="fs-14">El conductor no respondió la llamada o SMS</p>
+                  <input type="radio" name="optionCancelTrip" id="noRespondio">
+                  <label for="noRespondio" class="checkbox-square"></label>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="container__option-cancel-trip col-gap-5 p-5">
+                  <span class="icon icon-person-talk"></span>
+                  <p class="fs-14">El conductor me pidió cancelar el viaje</p>
+                  <input type="radio" name="optionCancelTrip" id="mePidoCancelar">
+                  <label for="mePidoCancelar" class="checkbox-square"></label>
+                </div>
+              </li>
+              <li class="slider__item line-bottom">
+                <div class="container__option-cancel-trip col-gap-5 p-5">
+                  <span class="icon icon-money"></span>
+                  <p class="fs-14">El conductor no acepta el método de pago</p>
+                  <input type="radio" name="optionCancelTrip" id="noAceptaPago">
+                  <label for="noAceptaPago" class="checkbox-square"></label>
+                </div>
+              </li>
+              <li class="slider__item">
+                <div class="container__option-cancel-trip col-gap-5 p-5">
+                  <span class="icon icon-smartphone"></span>
+                  <p class="fs-14">El celular del conductor está desactualizado</p>
+                  <input type="radio" name="optionCancelTrip" id="celularDesactualizado">
+                  <label for="celularDesactualizado" class="checkbox-square"></label>
+                </div>
+              </li>
+            </ol>
+            <button class="btn btn-sm btn-green w-100 fs-18">Cancelar viaje</button>
           </div>
         </section>
       </div>

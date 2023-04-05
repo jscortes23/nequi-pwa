@@ -159,6 +159,28 @@ html {
     text-align: left;
 }
 
+.vh-60 {
+    height: 60vh;
+}
+
+.checkbox-square {
+    width: 34px;
+    height: 34px;
+    background-color: #DCDCDF;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+
+input[type="radio"]:checked + .checkbox-square {
+    background-color: #CADC31;
+    background-image: url('/assets/icons/mark.svg');
+}
+
+input[type="radio"] {
+    display: none;
+}
+
 /*********************************************************/
 /************         ICONS CLASS           **************/
 /*********************************************************/
@@ -214,6 +236,7 @@ html {
     height: 23px;
     border: none;
     background: none;
+    background-repeat: no-repeat;
     filter: none;
     background-image: url('/assets/icons/arrow-left-dark.svg');
 }
@@ -326,6 +349,84 @@ html {
     background-image: url('/assets/icons/star-green.svg');
 }
 
+.icon-chorometer {
+    width: 24px;
+    height: 28px;
+    background-image: url('/assets/icons/choronometer.svg');
+}
+
+.icon-chorometer {
+    width: 24px;
+    height: 28px;
+    background-image: url('/assets/icons/choronometer.svg');
+}
+
+.icon-change {
+    width: 24px;
+    height: 28px;
+    background-image: url('/assets/icons/change.svg');
+}
+
+.icon-warning {
+    width: 24px;
+    height: 28px;
+    background-image: url('/assets/icons/warning.svg');
+}
+
+.icon-prohibited {
+    width: 24px;
+    height: 28px;
+    background-image: url('/assets/icons/prohibited.svg');
+}
+
+.icon-star-white {
+    width: 24px;
+    height: 28px;
+    background-image: url('/assets/icons/star-white.svg');
+}
+
+.icon-deny {
+    width: 24px;
+    height: 28px;
+    background-image: url('/assets/icons/deny.svg');
+}
+
+.icon-person-deny {
+    width: 24px;
+    height: 28px;
+    background-image: url('/assets/icons/person-deny.svg');
+}
+
+.icon-person-deny {
+    width: 24px;
+    height: 28px;
+    background-image: url('/assets/icons/person-deny.svg');
+}
+
+.icon-question {
+    width: 24px;
+    height: 28px;
+    background-image: url('/assets/icons/question.svg');
+}
+
+.icon-person-talk {
+    width: 24px;
+    height: 28px;
+    background-image: url('/assets/icons/person-talk.svg');
+}
+
+.icon-money {
+    width: 24px;
+    height: 28px;
+    background-image: url('/assets/icons/money.svg');
+}
+
+.icon-smartphone {
+    width: 24px;
+    height: 28px;
+    background-image: url('/assets/icons/smartphone.svg');
+}
+
 /*********************************************************/
 /************         BUTTONS CLASS         **************/
 /*********************************************************/
@@ -431,8 +532,16 @@ html {
     padding: 28px 20px;
 }
 
+.p-28-8 {
+    padding: 28px 8px;
+}
+
 .p-14-18 {
     padding: 14px 18px;
+}
+
+.p-5 {
+    padding: 20px;
 }
 
 .py-12 {
@@ -447,12 +556,24 @@ html {
     padding-inline: 12px;
 }
 
+.px-4 {
+    padding-inline: 16px;
+}
+
+.px-5 {
+    padding-inline: 20px;
+}
+
 .pb-12 {
     padding-bottom: 12px;
 }
 
 .pt-12 {
     padding-top: 12px;
+}
+
+.pl-7 {
+    padding-left: 28px;
 }
 
 /*********************************************************/
@@ -479,6 +600,10 @@ html {
     margin-left: 24px;
 }
 
+.ml-7 {
+    margin-left: 28px;
+}
+
 .mb-1 {
     margin-bottom: 4px;
 }
@@ -495,13 +620,27 @@ html {
     margin-bottom: 16px;
 }
 
+.mb-5 {
+    margin-bottom: 20px;
+}
+
+.mb-7 {
+    margin-bottom: 28px;
+}
+
 .m-28-20 {
     margin-top: 28px;
     margin-right: 20px;
 }
+
 /*********************************************************/
 /************         FONT CLASS            **************/
 /*********************************************************/
+
+.fs-23 {
+    font-size: 2.3rem;
+    line-height: 2.804rem;
+}
 
 .fs-20 {
     font-size: var(--lg);
@@ -681,6 +820,18 @@ html {
     justify-content: space-between;
 }
 
+.jc-c-around {
+    justify-content: space-around;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.col-gap-5 {
+    column-gap: 20px;
+}
+
 /*********************************************************/
 /************         SECTION GRID CLASS    **************/
 /*********************************************************/
@@ -797,7 +948,8 @@ html {
 /*********************************************************/
 
 .view-here-pick-me-up,
-.view-where-i-go {
+.view-where-i-go,
+.view-option-cancel-trip {
     width: 100%;
     height: 100%;
     background-color: var(--font-color);
@@ -1047,4 +1199,19 @@ html {
     background-color: var(--font-color);
     box-shadow: 0px -2px 6px 0px #0000001A;
     border-radius: 12px 12px 0 0;
+}
+
+/*********************************************************/
+/************ SECTION VIEW OPTION TRIP CONTENT ***********/
+/*********************************************************/
+
+.view-option-cancel-trip__content {
+    height: 100%;
+    display: grid;
+}
+
+.container__option-cancel-trip {
+    display: grid;
+    align-items: center;
+    grid-template-columns: min-content 1fr min-content;
 }
