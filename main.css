@@ -80,6 +80,7 @@ html {
     --blue-tl: #1B1F3B;
     --text-color: #242B4C;
     --text-color-purple: #6782CC; 
+    --text-color-alert: #F55D5D; 
     --font-color: #FFFFFF;
     --link-color: #3f54a0;
     --sw-card: 2px 5px 10px rgba(0, 0, 0, 0.25);
@@ -427,6 +428,29 @@ input[type="radio"] {
     background-image: url('/assets/icons/smartphone.svg');
 }
 
+.icon-approved {
+    width: 14px;
+    height: 14px;
+    background-image: url('/assets/icons/state-approved.svg');
+}
+
+.container-ratings {
+    direction: rtl;
+}
+
+.icon-star-big {
+    font-size: 8rem;
+    color: #C3C3C3;
+}
+
+.icon-star-big:hover {
+    color: var(--primary-color);
+}
+
+.icon-star-big:hover ~ .icon-star-big {
+    color: var(--primary-color);
+}
+
 /*********************************************************/
 /************         BUTTONS CLASS         **************/
 /*********************************************************/
@@ -469,6 +493,7 @@ input[type="radio"] {
 }
 
 .btn-round {
+    display: inline-block;
     border-radius: 50%;
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
 }
@@ -530,6 +555,10 @@ input[type="radio"] {
 
 .p-28-20 {
     padding: 28px 20px;
+}
+
+.p-25-20 {
+    padding: 25px 20px;
 }
 
 .p-28-8 {
@@ -641,6 +670,11 @@ input[type="radio"] {
 /************         FONT CLASS            **************/
 /*********************************************************/
 
+.fs-25 {
+    font-size: var(--lg-x);
+    line-height: 3.048rem;
+}
+
 .fs-23 {
     font-size: 2.3rem;
     line-height: 2.804rem;
@@ -700,6 +734,10 @@ input[type="radio"] {
 
 .color-purple {
     color: var(--text-color-purple);
+}
+
+.color-red {
+    color: var(--text-color-alert);
 }
 
 /*********************************************************/
@@ -843,6 +881,15 @@ input[type="radio"] {
     display: grid;
 }
 
+.grid-col-2-text {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5px;
+}
+
+.grid-col-2-text > :nth-child(even) {
+    text-align: right;
+}
+
 .grid-h-full {
     grid-column: 1/7;
 }
@@ -945,6 +992,7 @@ input[type="radio"] {
 .view-cancel-trip,
 .view-cancel-trip__successful,
 .view-route-driver-info,
+.view-finished-trip,
 .view-found-taxi__content {
     height: 100%;
 }
@@ -963,7 +1011,8 @@ input[type="radio"] {
 
 .view-here-pick-me-up,
 .view-where-i-go,
-.view-option-cancel-trip {
+.view-option-cancel-trip,
+.view-finished-trip__content {
     width: 100%;
     height: 100%;
     background-color: var(--font-color);
@@ -1229,3 +1278,16 @@ input[type="radio"] {
     align-items: center;
     grid-template-columns: min-content 1fr min-content;
 }
+
+/*********************************************************/
+/************ SECTION VIEW FINISHED TRIP       ***********/
+/*********************************************************/
+
+/* .view-eco-taxi {
+    height: 100%;
+    width: 100%;
+    background-color: var(--font-color);
+    background-image: url('/assets/icons/back-car.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+} */
