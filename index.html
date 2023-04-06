@@ -458,13 +458,14 @@
             <div class="container__bottom grid-h-full">
               <div class="content__bottom">
                 <div class="row__bottom line-bottom">
-                  <span class="icon icon-car"></span>
-                  <p class="fs-18">Normal</p>
+                  <div class="flex align-items-center">
+                    <span class="icon icon-car"></span>
+                    <p class="fs-18 ml-2">Normal</p>
+                  </div>
                   <div class="column__bottom">
-                    <p class="fs-16">113.500-17.500</p>
+                    <p class="fs-16">$ 113.500-17.500</p>
                     <p class="fs-13">Más Inf.</p>
                   </div>
-                  <span class="icon icon-arrow-dark"></span>
                 </div>
                 <div class="row__bottom line-bottom">
                   <p class="fs-15">Código promo</p>
@@ -621,7 +622,7 @@
               <button class="btn btn-sm btn-green fs-18 w-100">Pedir después</button>
           </div>
         </section>
-        <section class="view-option-cancel-trip p-28-8">
+        <section class="view-option-cancel-trip p-28-8 hidden">
           <div class="view-option-cancel-trip__content">
             <button class="btn icon icon-arrow-dark-left ml-7 mb-7"></button>
             <p class="fs-23 ml-7 fw-600 mb-4">¿Vas a cancelar el viaje?</p>
@@ -718,6 +719,78 @@
               </li>
             </ol>
             <button class="btn btn-sm btn-green w-100 fs-18">Cancelar viaje</button>
+          </div>
+        </section>
+        <section class="view-cancel-trip__successful hidden">
+          <div class="view-cancel-trip__content grid-col-6 grid-row-3">
+            <span class="icon icon-logo-tl grid-corner-top-right m-28-20"></span>
+            <button class="btn btn-lg-xxx grid-h-full btn-with-icon fs-16">
+              Descargar Taxis Libres App
+              <span class="icon icon-arrow-dark-right"></span>
+            </button>
+            <div class="container__option-arrived grid-h-full">
+              <p class="fs-18 fw-800 w-100 text-left mb-2">¡Viaje cancelado!</p>
+              <p class="fs-16 w-100 text-left mb-4">Cancelaste el viaje de forma exitosa.</p>
+          </div>
+        </section>
+        <section class="view-route-driver-info">
+          <div class="view-start__content view-route__content grid-col-6">
+            <div class="view-line-route grid-h-full p-28-20">
+              <span class="icon icon-logo-tl grid-corner-top-right"></span>
+              <button
+                class="btn btn-round btn-back grid-corner-top-left"
+              ></button>
+              <span class="icon icon-small-car"></span>
+              <span class="icon icon-small-car"></span>
+              <div class="container__could-location top-10">
+                <p class="could-location fs-18">Carrera</p>
+                <span class="icon icon-point-blue"></span>
+              </div>
+              <div class="container__could-location top-25">
+                <p class="could-location fs-18">El Campín</p>
+                <span class="icon-point-destiny"></span>
+              </div>
+            </div>
+            <div class="container__info-driver grid-h-full">
+              <div class="info-driver__row pb-12">
+                <img src="" alt="" class="info-driver__img" />
+                <div class="info-driver__space-img"></div>
+                <div class="info-driver__column ml-4 col-2-4">
+                  <p class="fs-13"><span class="icon icon-star-small"></span>4,8</p>
+                  <p class="fs-16">Federico Hernández</p>
+                </div>
+              </div>
+              <div class="grid grid-columns-2 line-bottom line-top py-12 px-3">
+                <div class="flex align-items-center line-right">
+                  <span class="icon icon-car"></span>
+                  <div class="info-driver__column ml-2">
+                    <p class="fs-13 color-purple">Tipo de taxi</p>
+                    <p class="fs-16">Normal</p>
+                  </div>
+                </div>
+                <div class="info-driver__column ml-8 align-items-center">
+                  <p class="fs-13 color-purple">Placa</p>
+                  <p class="fs-16">SHD211</p>
+                </div>
+              </div>
+              <div class="info-driver__row py-12 px-3">
+                <span class="icon icon-nequi"></span>
+                <div class="info-driver__column ml-2 line-right">
+                  <p class="fs-13 color-purple">Pagas con</p>
+                  <p class="fs-16">Nequi</p>
+                </div>
+                <div class="info-driver__column ml-1 col-3-5 ml-8">
+                  <p class="fs-13 color-purple">Valor aproximado</p>
+                  <p class="fs-16">$ 13.500 - 16.500</p>
+                </div>
+                <span class="icon icon-arrow-dark col-5"></span>
+              </div>
+              <div class="info-driver__row info-driver__row__buttons pt-12">
+                <button class="btn btn-green p-14-18"><span class="icon icon-x"></span></button>
+                <button class="btn btn-green btn-with-icon btn-center-content p-14-18"><span class="icon icon-messenger-call"></span>Contactar</button>
+                <button class="btn btn-green btn-with-icon btn-center-content p-14-18"><span class="icon icon-share"></span>Compartir</button>
+              </div>
+            </div>
           </div>
         </section>
       </div>

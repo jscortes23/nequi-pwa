@@ -596,6 +596,10 @@ input[type="radio"] {
     margin-left: 16px;
 }
 
+.ml-5 {
+    margin-left: 20px;
+}
+
 .ml-8 {
     margin-left: 24px;
 }
@@ -835,6 +839,9 @@ input[type="radio"] {
 /*********************************************************/
 /************         SECTION GRID CLASS    **************/
 /*********************************************************/
+.grid {
+    display: grid;
+}
 
 .grid-h-full {
     grid-column: 1/7;
@@ -852,9 +859,14 @@ input[type="radio"] {
     grid-template-rows: min-content 1fr repeat(2, min-content);
     row-gap: 4px;
 }
+
 .grid-row-3 {
     grid-template-rows: 1fr repeat(2, min-content);
     row-gap: 34px;
+}
+
+.grid-columns-2 {
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .grid-corner-top-right {
@@ -931,6 +943,8 @@ input[type="radio"] {
 .view-found-taxi,
 .view-i-have-arrived,
 .view-cancel-trip,
+.view-cancel-trip__successful,
+.view-route-driver-info,
 .view-found-taxi__content {
     height: 100%;
 }
