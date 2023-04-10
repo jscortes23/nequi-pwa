@@ -160,6 +160,10 @@ html {
     text-align: left;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .vh-60 {
     height: 60vh;
 }
@@ -451,6 +455,12 @@ input[type="radio"] {
     color: var(--primary-color);
 }
 
+.icon-person-small {
+    width: 12px;
+    height: 12px;
+    background-image: url('/assets/icons/person-small.svg');
+}
+
 /*********************************************************/
 /************         BUTTONS CLASS         **************/
 /*********************************************************/
@@ -661,6 +671,10 @@ input[type="radio"] {
     margin-bottom: 28px;
 }
 
+.mb-40 {
+    margin-bottom: 40px;
+}
+
 .m-28-20 {
     margin-top: 28px;
     margin-right: 20px;
@@ -858,6 +872,10 @@ input[type="radio"] {
     display: flex;
 }
 
+.flex-direction-column {
+    flex-direction: column;
+}
+
 .jf-c-between {
     justify-content: space-between;
 }
@@ -993,6 +1011,7 @@ input[type="radio"] {
 .view-cancel-trip__successful,
 .view-route-driver-info,
 .view-finished-trip,
+.view-eco-taxi,
 .view-found-taxi__content {
     height: 100%;
 }
@@ -1280,14 +1299,14 @@ input[type="radio"] {
 }
 
 /*********************************************************/
-/************ SECTION VIEW FINISHED TRIP       ***********/
+/************ SECTION VIEW ECO TAXI            ***********/
 /*********************************************************/
 
-/* .view-eco-taxi {
+.view-eco-taxi__content {
     height: 100%;
     width: 100%;
     background-color: var(--font-color);
     background-image: url('/assets/icons/back-car.svg');
     background-repeat: no-repeat;
-    background-position: right;
-} */
+    background-position: 100% 45px;
+}
