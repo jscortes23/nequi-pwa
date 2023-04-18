@@ -35,6 +35,7 @@ picture {
 body {
     line-height: 1.5;
     min-height: 100vh;
+    min-height: 100dvh;
 }
 
 /* Make images easier to work with */
@@ -81,6 +82,7 @@ html {
     --text-color: #242B4C;
     --text-color-purple: #6782CC; 
     --text-color-alert: #F55D5D; 
+    --text-color-grey: #757575; 
     --font-color: #FFFFFF;
     --link-color: #3f54a0;
     --sw-card: 2px 5px 10px rgba(0, 0, 0, 0.25);
@@ -148,7 +150,7 @@ html {
     background-color: #FFFFFF;
     background-repeat: no-repeat;
     background-position: center;
-    border-radius: 12px;
+    border-radius: 6px;
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
 }
 
@@ -461,6 +463,18 @@ input[type="radio"] {
     background-image: url('/assets/icons/person-small.svg');
 }
 
+.icon-check-big {
+    width: 69px;
+    height: 70px;
+    background-image: url('/assets/icons/check-big.svg');
+}
+
+.icon-cancel-big {
+    width: 70px;
+    height: 70px;
+    background-image: url('/assets/icons/cancel-big.svg');
+}
+
 /*********************************************************/
 /************         BUTTONS CLASS         **************/
 /*********************************************************/
@@ -581,6 +595,10 @@ input[type="radio"] {
 
 .p-5 {
     padding: 20px;
+}
+
+.p-1 {
+    padding: 4px;
 }
 
 .py-12 {
@@ -752,6 +770,10 @@ input[type="radio"] {
 
 .color-red {
     color: var(--text-color-alert);
+}
+
+.color-grey {
+    color: var(--text-color-grey);
 }
 
 /*********************************************************/
@@ -1012,13 +1034,18 @@ input[type="radio"] {
 .view-route-driver-info,
 .view-finished-trip,
 .view-eco-taxi,
+.view-code,
+.view-code__valid,
+.view-code__invalid,
+.view-code-promo,
 .view-found-taxi__content {
     height: 100%;
 }
 
 .view-start__content,
 .view-cancel-trip__content,
-.view-i-have-arrived__content {
+.view-i-have-arrived__content,
+.view-code__content {
     display: grid;
     height: 100%;
     justify-items: center;
@@ -1031,6 +1058,7 @@ input[type="radio"] {
 .view-here-pick-me-up,
 .view-where-i-go,
 .view-option-cancel-trip,
+.view-code-promo__content,
 .view-finished-trip__content {
     width: 100%;
     height: 100%;
@@ -1268,6 +1296,10 @@ input[type="radio"] {
     column-gap: 9px;
 }
 
+.info-driver__row__buttons-col-2-4 {
+    grid-column: 2/4;
+}
+
 /*********************************************************/
 /************  SECTION VIEW I HAVE ARRIVED   **************/
 /*********************************************************/
@@ -1309,4 +1341,62 @@ input[type="radio"] {
     background-image: url('/assets/icons/back-car.svg');
     background-repeat: no-repeat;
     background-position: 100% 45px;
+}
+
+/*********************************************************/
+/************ SECTION VIEW CODE                ***********/
+/*********************************************************/
+
+.view-code__content {
+    display: grid;
+    height: 100%;
+    justify-items: center;
+    grid-template-rows: 1fr min-content;
+}
+
+.view-code__content {
+    content: '';
+    width: 100%;
+    background-color: #7D7D7D;
+}
+
+.view-code__content > :first-child {
+    grid-row: 2;
+}
+
+/*********************************************************/
+/************ SECTION VIEW CODE PROMO       **************/
+/*********************************************************/
+
+.code-promo__input-text {
+    width: 100%;
+    padding: 6px 0;
+    border: none;
+    border-bottom: 1px solid #9B9B9B;
+    font-weight: 800;
+    line-height: 1.95rem;
+    font-size: var(--sm);
+}
+
+.code-promo__input-text::placeholder {
+    color: #9B9B9B;
+    font-weight: 800;
+    font-size: var(--sm);
+    line-height: 1.95rem;
+}
+
+.card-promo {
+    display: grid;
+    row-gap: 9px;
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 28px;
+    font-size: var(--sm-xxx);
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0px 1px 6px 1px #00000026;
+}
+
+.line-bottom-blue {
+    border-bottom: 1px solid #6D80C5
 }

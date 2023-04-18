@@ -34,6 +34,20 @@ const btnNextView= $('.view-cancel-trip__successful .btn')
 const btnCloseInfoTaxi= $('.view-route-driver-info .btn.btn-green.p-14-18')
 const btnBack= $('.view-finished-trip .btn')
 
+/* Inputs */
+const inputIGoing = $('.container__input__text#go')
+const inputHere = $('.container__input__text#here')
+
+inputIGoing.addEventListener('focus', () => {
+    let sliderItem = $('.slider__item:nth-child(2)')
+    sliderItem.classList.remove('hidden')
+})
+
+inputHere.addEventListener('focus', () => {
+    let sliderItem = $('.slider__item:nth-child(2)')
+    sliderItem.classList.add('hidden')
+})
+
 function nextView(viewCurrent, viewNext) {
     viewCurrent.classList.add('hidden')
     viewNext.classList.remove('hidden')

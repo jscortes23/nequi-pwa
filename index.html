@@ -24,7 +24,7 @@
   <body>
     <main class="container__map">
       <div class="content__map">
-        <section class="view-start p-28-20">
+        <section class="view-start p-28-20 hidden">
           <div class="view-start__content grid-col-6 grid-row-5">
             <span class="icon icon-gps grid-right-row-3"></span>
             <div class="container-current-location">
@@ -77,7 +77,7 @@
                 required
               />
               <label for="go" class="container__input__label"
-                >¿para donde vas?</label
+                >¿Para dónde vas?</label
               >
             </div>
           </div>
@@ -88,6 +88,14 @@
                   <span class="icon icon-pointer-green"></span>
                   <p class="suggested__location__text">
                     Fijar la ubicación en el mapa
+                  </p>
+                </div>
+              </li>
+              <li class="slider__item line-bottom hidden">
+                <div class="suggested__location">
+                  <span class="icon icon-person-talking"></span>
+                  <p class="suggested__location__text">
+                    Diré el destino cuando me suba al taxi
                   </p>
                 </div>
               </li>
@@ -618,13 +626,13 @@
             <div class="container__option-arrived grid-h-full">
               <p class="fs-18 fw-800 w-100 text-left">¡Viaje cancelado!</p>
               <p class="fs-16 w-100 text-left mb-4">El conductor no puede recogerte.</p>
-              <button class="btn btn-sm btn-dark-blue fs-18 w-100 mb-3">Pedir taxi nuevamente</button>
-              <button class="btn btn-sm btn-green fs-18 w-100">Pedir después</button>
+              <button class="btn btn-sm btn-green fs-18 w-100 mb-3">Pedir taxi nuevamente</button>
+              <button class="btn btn-sm btn-dark-blue fs-18 w-100">Pedir después</button>
           </div>
         </section>
         <section class="view-option-cancel-trip p-28-8 hidden">
           <div class="view-option-cancel-trip__content">
-            <button class="btn icon icon-arrow-dark-left ml-7 mb-7"></button>
+            <button class="btn btn-round btn-back ml-7 mb-7"></button>
             <p class="fs-23 ml-7 fw-600 mb-4">¿Vas a cancelar el viaje?</p>
             <p class="fs-18 ml-7 fw-600 mb-5">¿Qué pasó?</p>
             <p class="fs-14 ml-7 mb-4">Selecciona una opción</p>
@@ -731,6 +739,7 @@
             <div class="container__option-arrived grid-h-full">
               <p class="fs-18 fw-800 w-100 text-left mb-2">¡Viaje cancelado!</p>
               <p class="fs-16 w-100 text-left mb-4">Cancelaste el viaje de forma exitosa.</p>
+              <button class="btn btn-sm btn-green fs-15 w-100">Volver a inicio</button>
           </div>
         </section>
         <section class="view-route-driver-info hidden">
@@ -787,8 +796,7 @@
               </div>
               <div class="info-driver__row info-driver__row__buttons pt-12">
                 <button class="btn btn-green p-14-18"><span class="icon icon-x"></span></button>
-                <button class="btn btn-green btn-with-icon btn-center-content p-14-18"><span class="icon icon-messenger-call"></span>Contactar</button>
-                <button class="btn btn-green btn-with-icon btn-center-content p-14-18"><span class="icon icon-share"></span>Compartir</button>
+                <button class="btn btn-green btn-with-icon btn-center-content info-driver__row__buttons-col-2-4 p-14-18"><span class="icon icon-share"></span>Compartir</button>
               </div>
             </div>
           </div>
@@ -808,7 +816,7 @@
               <p>$17.500</p>
               <p>Incentivo</p>
               <p>$0</p>
-              <p>Recargo noc. dom. o fest</p>
+              <p>Recargo noc. dom. o fest.</p>
               <p>$2.000</p>
               <p>Puerta a puerta</p>
               <p>$900</p>
@@ -856,7 +864,7 @@
                 <p>$13.500</p>
                 <p>Incentivo</p>
                 <p>$0</p>
-                <p>Recargo noc. dom. o fest</p>
+                <p>Recargo noc. dom. o fest.</p>
                 <p>$2.000</p>
                 <p>Puerta a puerta</p>
                 <p>$1.000</p>
@@ -871,6 +879,109 @@
               <p class="fs-13">El valor del viaje se modificará dependiendo del tráfico. Recuerda que nuestras tarifas están reguladas por las alcaldías locales.</p>
             </div>
             <div class="btn btn-green btn-sm fs-15 text-center">Seleccionar</div>
+          </div>
+        </section>
+        <section class="view-code-promo">
+          <div class="view-code-promo__content p-25-20 flex flex-direction-column jf-c-between">
+            <div>
+              <span class="btn btn-back btn-round mb-7"></span>
+              <p class="fs-25 fw-700 mb-1">Código promo</p>
+              <label for="codePromo">
+                <input type="text" name="codePromo" id="codePromo" class="code-promo__input-text" placeholder="Escribe el código promo">
+              </label>
+              <button class="btn btn-sm btn-green w-100 mt-4 mb-5 fs-14">Pedir taxi nuevamente</button>
+              <p class="fs-20 fw-700 mb-5">Agregados</p>
+              <ul class="slider p-1 vh-60">
+                <div class="card-promo slider__item">
+                  <p class="flex jf-c-between">Promo: SALSACAMARA<span class="fw-800">$110.000</span></p>
+                  <p class="color-red pb-12 line-bottom-blue">Para usarlo presiona aquí</p>
+                  <p class="flex jf-c-between">Ver T&C<span class="color-grey">Válido hasta: 2023-06-30</span></p>
+                </div>
+                <div class="card-promo slider__item">
+                  <p class="flex jf-c-between">Promo: SALSACAMARA<span class="fw-800">$110.000</span></p>
+                  <p class="color-red pb-12 line-bottom-blue">Para usarlo presiona aquí</p>
+                  <p class="flex jf-c-between">Ver T&C<span class="color-grey">Válido hasta: 2023-06-30</span></p>
+                </div>
+                <div class="card-promo slider__item">
+                  <p class="flex jf-c-between">Promo: SALSACAMARA<span class="fw-800">$110.000</span></p>
+                  <p class="color-red pb-12 line-bottom-blue">Para usarlo presiona aquí</p>
+                  <p class="flex jf-c-between">Ver T&C<span class="color-grey">Válido hasta: 2023-06-30</span></p>
+                </div>
+                <div class="card-promo slider__item">
+                  <p class="flex jf-c-between">Promo: SALSACAMARA<span class="fw-800">$110.000</span></p>
+                  <p class="color-red pb-12 line-bottom-blue">Para usarlo presiona aquí</p>
+                  <p class="flex jf-c-between">Ver T&C<span class="color-grey">Válido hasta: 2023-06-30</span></p>
+                </div>
+                <div class="card-promo slider__item">
+                  <p class="flex jf-c-between">Promo: SALSACAMARA<span class="fw-800">$110.000</span></p>
+                  <p class="color-red pb-12 line-bottom-blue">Para usarlo presiona aquí</p>
+                  <p class="flex jf-c-between">Ver T&C<span class="color-grey">Válido hasta: 2023-06-30</span></p>
+                </div>
+                <div class="card-promo slider__item">
+                  <p class="flex jf-c-between">Promo: SALSACAMARA<span class="fw-800">$110.000</span></p>
+                  <p class="color-red pb-12 line-bottom-blue">Para usarlo presiona aquí</p>
+                  <p class="flex jf-c-between">Ver T&C<span class="color-grey">Válido hasta: 2023-06-30</span></p>
+                </div>
+                <div class="card-promo slider__item">
+                  <p class="flex jf-c-between">Promo: SALSACAMARA<span class="fw-800">$110.000</span></p>
+                  <p class="color-red pb-12 line-bottom-blue">Para usarlo presiona aquí</p>
+                  <p class="flex jf-c-between">Ver T&C<span class="color-grey">Válido hasta: 2023-06-30</span></p>
+                </div>
+                <div class="card-promo slider__item">
+                  <p class="flex jf-c-between">Promo: SALSACAMARA<span class="fw-800">$110.000</span></p>
+                  <p class="color-red pb-12 line-bottom-blue">Para usarlo presiona aquí</p>
+                  <p class="flex jf-c-between">Ver T&C<span class="color-grey">Válido hasta: 2023-06-30</span></p>
+                </div>
+                <div class="card-promo slider__item">
+                  <p class="flex jf-c-between">Promo: SALSACAMARA<span class="fw-800">$110.000</span></p>
+                  <p class="color-red pb-12 line-bottom-blue">Para usarlo presiona aquí</p>
+                  <p class="flex jf-c-between">Ver T&C<span class="color-grey">Válido hasta: 2023-06-30</span></p>
+                </div>
+                <div class="card-promo slider__item">
+                  <p class="flex jf-c-between">Promo: SALSACAMARA<span class="fw-800">$110.000</span></p>
+                  <p class="color-red pb-12 line-bottom-blue">Para usarlo presiona aquí</p>
+                  <p class="flex jf-c-between">Ver T&C<span class="color-grey">Válido hasta: 2023-06-30</span></p>
+                </div>
+                <div class="card-promo slider__item">
+                  <p class="flex jf-c-between">Promo: SALSACAMARA<span class="fw-800">$110.000</span></p>
+                  <p class="color-red pb-12 line-bottom-blue">Para usarlo presiona aquí</p>
+                  <p class="flex jf-c-between">Ver T&C<span class="color-grey">Válido hasta: 2023-06-30</span></p>
+                </div>
+                <div class="card-promo slider__item">
+                  <p class="flex jf-c-between">Promo: SALSACAMARA<span class="fw-800">$110.000</span></p>
+                  <p class="color-red pb-12 line-bottom-blue">Para usarlo presiona aquí</p>
+                  <p class="flex jf-c-between">Ver T&C<span class="color-grey">Válido hasta: 2023-06-30</span></p>
+                </div>
+                <div class="card-promo slider__item">
+                  <p class="flex jf-c-between">Promo: SALSACAMARA<span class="fw-800">$110.000</span></p>
+                  <p class="color-red pb-12 line-bottom-blue">Para usarlo presiona aquí</p>
+                  <p class="flex jf-c-between">Ver T&C<span class="color-grey">Válido hasta: 2023-06-30</span></p>
+                </div>
+              </ul>
+          </div>
+        </section>
+        <section class="view-code view-code__valid hidden">
+          <div class="view-code__content">
+            <div class="container__bottom grid-h-full">
+              <span class="icon icon-check-big mb-4"></span>
+              <p class="fs-25 fw-700 mb-3">Código válido</p>
+              <p class="fs-15 fw-700 mb-7">Fue agregado correctamente</p>
+              <button class="btn btn-lg-xxx btn-green fs-16 fw-700 grid-h-full">
+                Volver
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="view-code view-code__invalid hidden">
+          <div class="view-code__content">
+            <div class="container__bottom grid-h-full">
+              <span class="icon icon-cancel-big mb-4"></span>
+              <p class="fs-25 fw-700 mb-3">Código inválido</p>
+              <p class="fs-15 fw-700 mb-7">No fue encontrado</p>
+              <button class="btn btn-lg-xxx btn-green fs-16 fw-700 grid-h-full">
+                Volver
+              </button>
+            </div>
           </div>
         </section>
       </div>
