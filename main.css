@@ -475,6 +475,12 @@ input[type="radio"] {
     background-image: url('/assets/icons/cancel-big.svg');
 }
 
+.icon-airplane {
+    width: 16px;
+    height: 16px;
+    background-image: url('/assets/icons/airplane.svg');
+}
+
 /*********************************************************/
 /************         BUTTONS CLASS         **************/
 /*********************************************************/
@@ -563,6 +569,12 @@ input[type="radio"] {
     color: #F55D5D;
 }
 
+.btn-send {
+    width: 56px;
+    display: grid;
+    place-content: center;
+}
+
 .btn-lg-xxx {
     padding: 18px 20px;
     width: 100%;
@@ -571,6 +583,10 @@ input[type="radio"] {
 
 .btn-sm {
     padding: 18px 62px;
+}
+
+.btn-sm-x {
+    padding: 12px 14px;
 }
 
 /*********************************************************/
@@ -589,6 +605,10 @@ input[type="radio"] {
     padding: 28px 8px;
 }
 
+.p-20-26 {
+    padding: 20px 26px;
+}
+
 .p-14-18 {
     padding: 14px 18px;
 }
@@ -603,6 +623,10 @@ input[type="radio"] {
 
 .py-12 {
     padding: 12px 0;
+}
+
+.py-7 {
+    padding-block: 28px;
 }
 
 .px-2 {
@@ -621,8 +645,20 @@ input[type="radio"] {
     padding-inline: 20px;
 }
 
+.pb-1 {
+    padding-bottom: 4px;
+}
+
+.pb-7 {
+    padding-bottom: 28px;
+}
+
 .pb-12 {
     padding-bottom: 12px;
+}
+
+.pt-7 {
+    padding-top: 28px;
 }
 
 .pt-12 {
@@ -636,6 +672,14 @@ input[type="radio"] {
 /*********************************************************/
 /************         MARGIN CLASS          **************/
 /*********************************************************/
+
+.mt-1 {
+    margin-top: 4px;
+}
+
+.mt-2 {
+    margin-top: 8px;
+}
 
 .mt-4 {
     margin-top: 16px;
@@ -696,6 +740,10 @@ input[type="radio"] {
 .m-28-20 {
     margin-top: 28px;
     margin-right: 20px;
+}
+
+.mx-2 {
+    margin-inline: 8px;
 }
 
 /*********************************************************/
@@ -910,6 +958,10 @@ input[type="radio"] {
     align-items: center;
 }
 
+.align-items-start {
+    align-items: start;
+}
+
 .col-gap-5 {
     column-gap: 20px;
 }
@@ -1038,6 +1090,7 @@ input[type="radio"] {
 .view-code__valid,
 .view-code__invalid,
 .view-code-promo,
+.view-chat,
 .view-found-taxi__content {
     height: 100%;
 }
@@ -1399,4 +1452,76 @@ input[type="radio"] {
 
 .line-bottom-blue {
     border-bottom: 1px solid #6D80C5
+}
+
+/*********************************************************/
+/************ SECTION VIEW CODE PROMO       **************/
+/*********************************************************/
+
+.view-chat__content {
+    width: 100%;
+    height: 100%;
+    background-color: var(--font-color);
+    display: grid;
+    grid-template-rows: min-content 1fr;
+}
+
+.container-chat {
+    height: 100%;
+    display: grid;
+    padding: 20px 28px;
+}
+
+.container-chat__message {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    font-size: var(--sm-xx);
+    line-height: 1.707rem;
+}
+
+.container-chat__message > .message__sent {
+    align-self: end;
+}
+
+.container-chat__message > .message__received {
+    align-self: start;
+}
+
+.message__sent {
+    text-align: right;
+    width: fit-content;
+    padding: 14px;
+    background-color: #c8d930a4;
+    border-radius: 14px 14px 0 14px;
+}
+
+.message__received {
+    text-align: left;
+    width: fit-content;
+    padding: 14px;
+    background-color: #F0F0F0;
+    border-radius: 14px 14px 14px 0;
+}
+
+:is(.message__sent,.message__received) > .message__time {
+    font-size: 1.1rem;
+}
+
+.message__input-text {
+    width: 100%;
+    border: none;
+    padding-block: 16px;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    line-height: 1.463rem;
+    border-radius: 6px;
+    background-color: #F2F2F3;
+}
+
+.message__input-text::placeholder {
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.463rem;
+    color: var(--blue-tl);
 }

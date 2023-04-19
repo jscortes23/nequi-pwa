@@ -881,7 +881,7 @@
             <div class="btn btn-green btn-sm fs-15 text-center">Seleccionar</div>
           </div>
         </section>
-        <section class="view-code-promo">
+        <section class="view-code-promo hidden">
           <div class="view-code-promo__content p-25-20 flex flex-direction-column jf-c-between">
             <div>
               <span class="btn btn-back btn-round mb-7"></span>
@@ -982,6 +982,58 @@
                 Volver
               </button>
             </div>
+          </div>
+        </section>
+        <section class="view-chat">
+          <div class="view-chat__content pb-7">
+            <div class="pt-7 px-5 pb-12 line-bottom mx-2 flex jf-c-between align-items-start">
+              <span class="icon icon-logo-tl"></span>
+              <button class="btn btn-sm-x btn-green fs-14">Llamar a conductor</button>
+            </div>
+            <div class="container-chat slider">
+              <div class="container-chat__message">
+                <div class="message__sent">
+                  <p class="">Hola, ya estoy afuera</p>
+                  <div class="message__time">12:20</div>
+                </div>
+                <div class="message__received">
+                  <p class="">Ya bajo</p>
+                  <div class="message__time">12:20</div>
+                </div>
+                <div class="message__received">
+                  <p class="">Deme 10 minutos, estoy esperando a alguien</p>
+                  <div class="message__time">12:23</div>
+                </div>
+                <div class="message__sent">
+                  <p class="">Bueno, lo espero</p>
+                  <div class="message__time">12:25</div>
+                </div>
+                <div class="message__received">
+                  <p class="">Deme 10 minutos, estoy esperando a alguien</p>
+                  <div class="message__time">12:23</div>
+                </div>
+                <div class="message__received">
+                  <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <div class="message__time">12:23</div>
+                </div>
+                <div class="message__sent">
+                  <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, distinctio!</p>
+                  <div class="message__time">12:25</div>
+                </div>
+                <div class="message__sent">
+                  <p class="">Lorem ipsum dolor!</p>
+                  <div class="message__time">12:25</div>
+                </div>
+                <div class="message__received">
+                  <p class="">Ya bajo</p>
+                  <div class="message__time">12:20</div>
+                </div>
+              </div>
+            </div>
+            <label for="message" class="px-5 flex mt-2">
+              <input type="text" name="message" id="message" class="message__input-text" placeholder="Enviar mensaje">
+              <button class="btn btn-send btn-green"><span class="icon icon-airplane"></span></button>
+            </label>
           </div>
         </section>
       </div>
