@@ -17,6 +17,7 @@ const viewCancelTripSuccessful = $('.view-cancel-trip__successful')
 const viewRouteDriverInfo = $('.view-route-driver-info')
 const viewFinishedTrip = $('.view-finished-trip')
 const viewEcoTaxi = $('.view-eco-taxi')
+const viewCodePromo = $('.view-code-promo')
 
 /* Buttons */
 const btnGo = $('.view-start .btn-lg-xxx')
@@ -33,6 +34,8 @@ const btnCancelTrip= $('.view-option-cancel-trip .btn.btn-green')
 const btnNextView= $('.view-cancel-trip__successful .btn')
 const btnCloseInfoTaxi= $('.view-route-driver-info .btn.btn-green.p-14-18')
 const btnBack= $('.view-finished-trip .btn')
+const btnCodePromo = $('.view-route .row__bottom:nth-child(2).line-bottom')
+const btnBackCodePromo = $('.view-code-promo .btn.btn-back.btn-round')
 
 /* Inputs */
 const inputIGoing = $('.container__input__text#go')
@@ -48,6 +51,7 @@ inputHere.addEventListener('focus', () => {
     sliderItem.classList.add('hidden')
 })
 
+/* Funtions */
 function nextView(viewCurrent, viewNext) {
     viewCurrent.classList.add('hidden')
     viewNext.classList.remove('hidden')
@@ -112,3 +116,18 @@ btnCloseInfoTaxi.addEventListener('click', () => {
 btnBack.addEventListener('click', () => {
     nextView(viewFinishedTrip, viewEcoTaxi)
 })
+
+btnCodePromo.addEventListener('click', () => {
+    nextView(viewRoute, viewCodePromo)
+})
+
+btnBackCodePromo.addEventListener('click', () => {
+    nextView(viewCodePromo, viewRoute)
+})
+
+/* Registrando el Service Worker */
+if ("serviveWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/serviceWorker.js").then(res => console.log("service worker registrado")).catch(err => console.log("service worker no registrado", err))
+    })
+}
