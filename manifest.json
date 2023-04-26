@@ -1,9 +1,12 @@
 {
     "name": "Nequi Taxis Libres",
     "short_name": "Nequi Taxis Libres",
+    "description": "Taxis Libres | Nequi",
+    "scope": "./",
+    "lang": "es-CO",
     "start_url": "index.html",
     "display": "standalone",
-    "prefer_related_applications": true,
+    "prefer_related_applications": false,
     "background_color": "#fff",
     "theme_color": "#fff",
     "orientation": "portrait-primary",
